@@ -13,5 +13,4 @@ export default defineConfig({
         tailwind(),
     ],
     site: 'https://pydev-guide.github.io',
-    base: 'scieng',
 });
