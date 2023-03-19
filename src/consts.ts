@@ -1,5 +1,5 @@
 export const SITE = {
-	title: 'Documentation',
+	title: 'PyDev for Science',
 	description: 'Your website description.',
 	defaultLanguage: 'en-us',
 } as const;
@@ -19,9 +19,9 @@ export const KNOWN_LANGUAGES = {
 } as const;
 export const KNOWN_LANGUAGE_CODES = Object.values(KNOWN_LANGUAGES);
 
-export const GITHUB_EDIT_URL = `https://github.com/withastro/astro/tree/main/examples/docs`;
-
-export const COMMUNITY_INVITE_URL = `https://astro.build/chat`;
+export const GITHUB_URL = `https://github.com/pydev-guide/pydev-guide.github.io`;
+export const GITHUB_EDIT_URL = `${GITHUB_URL}/tree/main/`;
+export const COMMUNITY_INVITE_URL = "";
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
@@ -37,10 +37,7 @@ export type Sidebar = Record<
 export const SIDEBAR: Sidebar = {
 	en: {
 		'Section Header': [
-			{ text: 'Introduction', link: 'en/introduction' },
-			{ text: 'Page 2', link: 'en/page-2' },
-			{ text: 'Page 3', link: 'en/page-3' },
+			{ text: 'Introduction', link: 'en/intro' },
 		],
-		'Another Section': [{ text: 'Page 4', link: 'en/page-4' }],
 	},
 };
