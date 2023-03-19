@@ -12,5 +12,6 @@ export default defineConfig({
         react(),
         tailwind(),
     ],
-    site: `https://astro.build`,
+    site: 'https://pydev-guide.github.io',
+    base: 'scieng',
 });
