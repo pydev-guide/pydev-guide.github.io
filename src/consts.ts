@@ -25,9 +25,9 @@ export const COMMUNITY_INVITE_URL = "";
 
 // See "Algolia" section of the README for more information.
 export const ALGOLIA = {
-	indexName: 'XXXXXXXXXX',
-	appId: 'XXXXXXXXXX',
-	apiKey: 'XXXXXXXXXX',
+	indexName: 'pydev-guideio',
+	appId: '1P0JFWH15Y',
+	apiKey: '510fc9b7c9d0a0621c1e4a6c75cb3208',
 };
 
 export type Sidebar = Record<
