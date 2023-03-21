@@ -113,7 +113,7 @@ Run the command: `pip install my_package`
 
 ## Task Lists
 
-* [x] @mentions, #refs, [links](...), **formatting**, and <del>tags</del> supported
+* [x] @mentions, #refs, [links](index), **formatting**, and <del>tags</del> supported
 * [x] list syntax required (any unordered or ordered list supported)
 * [x] this is a complete item
 * [ ] this is an incomplete item
@@ -161,8 +161,8 @@ single newline, so it's a separate line in the *same paragraph*.
 
 ## Buttons
 
-[Subscribe to our newsletter](...){ .md-button .md-button--primary }
+[Subscribe to our newsletter](index){ .md-button .md-button--primary }
 
 with icons
 
-[Send :fontawesome-solid-paper-plane:](...){ .md-button }
+[Send :fontawesome-solid-paper-plane:](index){ .md-button }

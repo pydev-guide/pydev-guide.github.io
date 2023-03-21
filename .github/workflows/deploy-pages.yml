@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # needed for git committers
 
       - name: Install Python
         uses: actions/setup-python@v4
@@ -28,6 +30,9 @@ jobs:
           pip install -r requirements.txt
           # TODO: make --strict
           mkdocs build
+        env:
+          MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
+          GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
 
       - name: Upload Pages Artifact
         uses: actions/upload-pages-artifact@v1
