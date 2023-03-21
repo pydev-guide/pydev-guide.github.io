@@ -1,6 +1,5 @@
 # pyproject.toml
 
-
 ### Further Reading
 
 - <https://peps.python.org/pep-0518>
