@@ -78,7 +78,9 @@ markdown_extensions:
 plugins:
   - search
   - tags
-  - git-revision-date-localized
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
   - git-committers:
       repository: pydev-guide/pydev-guide.github.io
       branch: main
