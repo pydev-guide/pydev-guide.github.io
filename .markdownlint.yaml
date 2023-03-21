@@ -1,0 +1,9 @@
+# Default state for all rules
+default: true
+
+# MD001 = Heading levels should only increment by one level at a time
+MD001: false
+# MD046/code-block-style - Code block style
+MD046: false
+# MD033/no-inline-html - Inline HTML
+MD033: false

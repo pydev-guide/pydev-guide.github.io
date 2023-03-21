@@ -5,15 +5,6 @@
 To run the dev site locally
 
 ```bash
-npm install
-npm run dev
+pip install -r requirements.txt
+mkdocs serve
 ```
-
-Most content is in the `src/content` directory.
-
-The site is built with [astro](https://docs.astro.build/en/getting-started/)
-using the [docs](https://github.com/withastro/astro/tree/main/examples/docs)
-template.
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for more information on the structure of
-this repo.

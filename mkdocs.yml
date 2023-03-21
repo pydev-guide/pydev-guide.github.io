@@ -1,0 +1,98 @@
+site_name: pydev-guide
+repo_url: https://github.com/pydev-guide/pydev-guide.github.io
+repo_name: pydev-guide
+edit_uri: edit/main/docs/
+
+nav:
+    - Home: index.md
+    - Tutorial:
+        - Introduction: tutorial/index.md
+        - tutorial/bare_minimum.md
+        - tutorial/project_metadata.md
+    - Guides:
+        - pyproject.toml: guides/pyproject.md
+    - Glossary: glossary.md
+    - "[demo]": demo.md
+
+theme:
+    name: material
+    logo: assets/flask_logo.svg
+    favicon: images/flask_logo.svg
+    font: false
+    custom_dir: docs/overrides
+    palette:
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          scheme: default
+          primary: blue grey
+          accent: indigo
+          toggle:
+              icon: octicons/moon-24
+              name: Switch to dark mode
+
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          scheme: slate
+          primary: orange
+          accent: amber
+          toggle:
+              icon: octicons/sun-24
+              name: Switch to light mode
+    icon:
+        repo: fontawesome/brands/github
+        edit: material/pencil
+    features:
+        - content.code.copy
+        - content.code.annotate
+        - content.action.edit
+        - navigation.footer
+        # - navigation.instant
+        - navigation.tracking
+        - search.highlight
+        - search.share
+        - search.suggest
+
+markdown_extensions:
+    - admonition
+    - attr_list
+    - def_list
+    - pymdownx.details
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.snippets
+    - pymdownx.superfences
+    - pymdownx.superfences
+    - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
+    - pymdownx.emoji:
+          emoji_index: !!python/name:materialx.emoji.twemoji
+          emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.tabbed:
+          alternate_style: true
+    - toc:
+          permalink: "#"
+
+plugins:
+    - search
+    - tags
+    - spellcheck:
+          backends: # the backends you want to use
+              - codespell: # or nested configs
+                    dictionaries: [clear, rare]
+
+watch:
+    - docs
+
+extra:
+    social:
+        - icon: fontawesome/brands/github
+          link: https://github.com/pydev-guide/pydev-guide.github.io
+    generator: false
+
+extra_css:
+    - stylesheets/extra.css
+
+extra_javascript:
+    - javascripts/extra.js
