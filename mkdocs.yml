@@ -47,8 +47,8 @@ theme:
     - content.code.annotate
     - content.action.edit
     - navigation.footer
-    # - navigation.instant
-    - navigation.tracking
+    - navigation.instant
+    # - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest

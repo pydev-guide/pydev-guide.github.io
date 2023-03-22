@@ -60,6 +60,10 @@ nav.md-header__inner {
 }
 /* ---------------- Typography ------------ */
 
+.md-typeset {
+  font-size: 0.84rem;
+}
+
 .md-typeset h1 {
   color: var(--md-default-fg-color);
   font-size: 3em;
@@ -79,10 +83,12 @@ nav.md-header__inner {
 
 .md-typeset h2 {
   font-size: 2rem;
+  margin: 1em 0 .64em;
 }
 
 .md-typeset h3 {
   font-size: 1.5rem;
+  margin: 1em 0 .8em;
 }
 
 .md-typeset h4 {
@@ -138,9 +144,14 @@ table.highlighttable tr:nth-child(2) pre > code {
   vertical-align: -0.05em;
 }
 
-/* --------------- Right-nav ------------------- */
+/* --------------- Right-nav sidebar --------------- */
 
 /* highlighting */
+
+nav.md-nav--secondary label.md-nav__title{
+  color: var(--md-default-fg-color);
+  font-weight: 800;
+}
 
 nav.md-nav--secondary > ul > li.md-nav__item {
   border-left: 3px solid;
@@ -150,14 +161,18 @@ nav.md-nav--secondary > ul > li.md-nav__item:hover {
   border-left-color: var(--md-default-fg-color--lighter);
 }
 nav.md-nav--secondary > ul > li.md-nav__item:has(a.md-nav__link--active) {
-  color: var(--md-typeset-kbd-accent-color);
-  background-color: var(--md-typeset-kbd-color);
+  background-color: var(--md-default-fg-color--lightest);
 }
 nav.md-nav--secondary > ul > li.md-nav__item .md-nav__link {
   margin-top: 0;
   padding-top: 5px;
   padding-bottom: 6px;
   padding-left: 6px;
+}
+
+/* Hide edit this page icon, because we put it on the right nav */
+.md-content__button.md-icon[title="Edit this page"] {
+  display: none;
 }
 
 /* --------------- Footer ------------------- */

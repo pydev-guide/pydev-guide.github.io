@@ -5,7 +5,10 @@
         {% if page.meta.git_revision_date_localized %}
             <span class="twemoji" title="last-update">{% include ".icons/material/clock-edit-outline.svg" %}</span>
             {{ page.meta.git_revision_date_localized }}
-            {% if page.meta.git_creation_date_localized %}
+            {% if
+                page.meta.git_creation_date_localized and
+                page.meta.git_creation_date_localized != page.meta.git_revision_date_localized
+                %}
                 <span class="twemoji" title="created" style="margin-left: 10px">
                     {% include ".icons/material/clock-plus-outline.svg" %}
                 </span>
