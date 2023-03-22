@@ -4,3 +4,4 @@ mkdocs-spellcheck[all]
 mkdocs-git-revision-date-localized-plugin
 mkdocs-git-committers-plugin
 mkdocs-minify-plugin
+mkdocs-jupyter

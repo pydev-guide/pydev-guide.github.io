@@ -14,6 +14,7 @@ nav:
       - Build systems: guides/build_system.md
   - Glossary: glossary.md
   - "[demo]": demo.md
+  - Notebook page: notebook.ipynb
 
 theme:
   name: material
@@ -78,6 +79,8 @@ markdown_extensions:
 plugins:
   - search
   - tags
+  - mkdocs-jupyter:
+      execute: true
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
