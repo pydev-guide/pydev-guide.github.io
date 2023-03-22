@@ -9,7 +9,7 @@
   color: var(--md-typeset-a-color);
 }
 
-label.md-nav__title {
+.md-nav--secondary label.md-nav__title {
   /* text-transform: uppercase; */
   margin-bottom: 10px;
 }
