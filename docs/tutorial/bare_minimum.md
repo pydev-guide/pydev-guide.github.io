@@ -2,15 +2,15 @@
 # The Bare Minimum
 
 Before we add a bunch of tooling that makes our package easier to maintain over
-time, it's informative to see the absolute minimum needed to create a Python
+time, it's informative to see the **absolute minimum** needed to create a Python
 package.
 
 ## Project Structure
 
 For a basic modern Python package, you need:
 
-1. A directory containing a `pyproject.toml` file
-1. A Python module or package
+1. A directory containing a `pyproject.toml` file (much more on this soon)
+1. Some code: a Python module or package
 
 ```text title="File Structure"
 my-package/

@@ -5,6 +5,7 @@ edit_uri: edit/main/docs/
 
 nav:
   - Home: index.md
+  - Quickstart: quickstart.md
   - Tutorial:
       - Introduction: tutorial/index.md
       - tutorial/bare_minimum.md
@@ -92,8 +93,10 @@ plugins:
       cache_safe: true
       css_files:
         - stylesheets/extra.css
+        - stylesheets/termynal.css
       js_files:
         - javascripts/extra.js
+        - javascripts/termynal.js
   - spellcheck:
       backends: # the backends you want to use
         - codespell: # or nested configs
@@ -128,7 +131,9 @@ extra:
             or click "Edit this page" in the sidebar to contribute.
 
 extra_css:
+  - stylesheets/termynal.css
   - stylesheets/extra.css
 
 extra_javascript:
+  - javascripts/termynal.js
   - javascripts/extra.js
