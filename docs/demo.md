@@ -6,6 +6,12 @@ tags:
 
 # Markdown Demo
 
+```python
+import numpy as np
+
+print(np.__version__)
+```
+
 !!!Note
     This is a demo of the markdown syntax used in this documentation. It is not
     part of the site.

@@ -48,7 +48,7 @@ theme:
     - content.code.annotate
     - content.action.edit
     - navigation.footer
-    - navigation.instant
+    # - navigation.instant  # hard to use with javascript on page load
     # - navigation.tracking
     - search.highlight
     - search.share
