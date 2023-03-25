@@ -10,9 +10,24 @@ nav:
       - Introduction: tutorial/index.md
       - tutorial/bare_minimum.md
       - tutorial/project_metadata.md
+      - tutorial/code_quality.md
+      - tutorial/github.md
+      - tutorial/publishing.md
   - Guides:
       - pyproject.toml: guides/pyproject.md
-      - Build systems: guides/build_system.md
+      - Packaging: guides/packaging.md
+      - Typing: guides/typing.md
+      - Linters: guides/linters.md
+      - IDEs: guides/ides.md
+      - Formatters: guides/formatters.md
+      - Testing: guides/testing.md
+      - Version Management: guides/versioning.md
+      - Publishing: guides/publishing.md
+      - Continuous Integration: guides/ci.md
+      - Documentation: guides/documentation.md
+      - Publishing: guides/publishing.md
+      - Pre-commit: guides/pre-commit.md
+      - Dependency Management: guides/dependencies.md
   - Glossary: glossary.md
   - "[demo]": demo.md
 

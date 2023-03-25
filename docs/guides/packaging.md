@@ -1,4 +1,4 @@
-# Build systems
+# Packaging
 
 There are a few different build systems that can be used to build Python
 packages.  The most popular are:
