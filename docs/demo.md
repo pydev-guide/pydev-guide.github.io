@@ -20,11 +20,13 @@ print(np.__version__)
 import numpy as np
 import matplotlib.pyplot as plt
 
-x = np.linspace(0, 2 * np.pi, 400)
+x = np.linspace(0, 2 * np.pi, 400) # (1)!
 y = np.sin(x ** 2)
 plt.plot(x, y)
 plt.show()
 ```
+
+1. This is a comment in the code block.
 
 ## Subheading
 

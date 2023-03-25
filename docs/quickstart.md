@@ -1,3 +1,4 @@
+<!-- markdownlint-disable MD013 -->
 # Quickstart Python Project
 
 If you're in a hurry, or you've been through this before,
@@ -104,3 +105,254 @@ $ A super awesome python package.
 
 After the project is generated, you will need to do a few things to get it
 ready for development.
+
+### Initialize a Git Repository
+
+It's a good idea to keep your project under version control, so let's initialize
+a git repository:
+
+<div class="termy">
+
+```console
+$ cd my-project
+$ git init -b main
+Initialized empty Git repository in ./my-project/.git/
+$ git add .
+$ git commit -m "Initial commit"
+[main (root-commit) 7d1f9bb] Initial Commit
+ 13 files changed, 498 insertions(+)
+ create mode 100644 .copier-answers.yml
+ create mode 100644 .github/ISSUE_TEMPLATE.md
+ create mode 100644 .github/TEST_FAIL_TEMPLATE.md
+ create mode 100644 .github/dependabot.yml
+ create mode 100644 .github/workflows/ci.yml
+ create mode 100644 .gitignore
+ create mode 100644 .pre-commit-config.yaml
+ create mode 100644 LICENSE
+ create mode 100644 README.md
+ create mode 100644 pyproject.toml
+ create mode 100644 src/my_project/__init__.py
+ create mode 100644 src/my_project/py.typed
+ create mode 100644 tests/test_my_project.py
+```
+
+</div>
+
+### Install the Project
+
+To begin working on your project, you'll usually want to install it in editable mode
+with `pip`:
+
+???question "Editable mode?"
+    [Editable installs](https://pip.pypa.io/en/stable/topics/local-project-installs/#editable-installs)
+    (i.e. `pip install -e .`) allow you to install your
+    project without copying any files into your environment's `site-packages`
+    directory. Instead, the files in the development directory are added to
+    Python’s import path; so any changes you make to your package will be
+    included the next time you run/import your code.  This approach is well
+    suited for development and is also known as a “development installation”.
+
+<div class="termy">
+
+```console
+$ pip install -e .
+Obtaining file:///home/user/my-project
+Installing build dependencies ... done
+---> 100%
+...
+Successfully built my-project
+Installing collected packages: my-project
+Successfully installed my-project-0.1.dev1+g7d1f9bb
+```
+
+</div>
+
+### Run Tests
+
+To run your tests, install the test dependencies with the `[test]`
+[extra](https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-extras)
+that was included in the template, and then run [`pytest`](https://pytest.org):
+
+<div class='termy'>
+
+```console
+// the quotes around ".[test]" here are just in case you're
+// in a zsh terminal... but should work in all cases
+
+$ pip install -e ".[test]"
+$ pytest
+
+<b>==================== test session starts ====================</b>
+<font>platform darwin -- Python 3.11.0, pytest-7.2.2, pluggy-1.0.0</font>
+<font>rootdir: /Users/talley/Desktop/my-project, </font>
+<font>configfile: pyproject.toml, testpaths: tests</font>
+<font>plugins: cov-4.0.0</font>
+<font><b>collected 1 item</b></font>
+
+<font>tests/test_my_project.py </font><font color="lime">.                            [100%]
+
+===================== <b>1 passed</b> in 0.00s =====================</font>
+
+```
+
+</div>
+
+As you develop your code, make sure to add more tests to your `tests` directory!
+
+### Push it to github
+
+If you want to host your project on GitHub, you can create a new repository
+and push your project there in one of two ways:
+
+!!!tip "Official Documentation"
+    See [Adding locally hosted code to
+    Github](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=mac)
+    for complete details.
+
+=== "using the github website"
+
+    1. [Create a new repository on GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
+    1. At the top of your repository on github.com's Quick Setup page,
+       click :octicons-paste-24: to copy the remote repository URL.
+    1. Add the new repository as a remote to your local repository, and push
+       your local repo:
+
+    <div class="termy">
+
+    ```console
+    $ git remote add origin PASTE_URL_HERE
+    $ git push -u origin main
+    ```
+
+    </div>
+
+=== "use the `gh` command line tool"
+
+    1. [Install the `gh` command line tool](https://cli.github.com)
+    2. Run [`gh repo create`](https://cli.github.com/manual/gh_repo_create):
+
+    <div class="termy">
+
+    ```console
+    $ gh repo create --source=. --public --remote=origin --push
+
+    <font color='green'>✓</font> Created repository githubuser/my-project on GitHub
+    <font color='green'>✓</font> Added remote https://github.com/githubuser/my-project.git
+    Enumerating objects: 20, done.
+    Counting objects: 100% (20/20), done.
+    Delta compression using up to 8 threads
+    Compressing objects: 100% (16/16), done.
+    Writing objects: 100% (20/20), 7.07 KiB | 7.07 MiB/s, done.
+    Total 20 (delta 0), reused 0 (delta 0), pack-reused 0
+    To https://github.com/githubuser/my-project.git
+    * [new branch]      HEAD -> main
+    branch 'main' set up to track 'origin/main'.
+    <font color='green'>✓</font>  Pushed commits to https://github.com/githubuser/my-project.git
+
+    ```
+
+    </div>
+
+### Deploy to PyPI
+
+It's probably a bit premature to be deploying just now :wink:, but when you're
+ready, you can easily publish your package to the [Python Package Index
+(PyPI)](https://pypi.org), enabling others to `pip install` it.
+
+1. First, make sure you've bumped the version of your package:
+
+    === "If you selected 'Simple' mode"
+
+        Update the version string in the `__init__.py` file in your top level module
+        (this is the single source of truth for your package version)
+
+        ```python title="src/my_project/__init__.py"
+        __version__ = '0.1.0'  # update here
+        ```
+
+    === "If you selected 'Fully Featured'"
+
+        Your version is sourced from your git tags using
+        [setuptools-scm](https://github.com/pypa/setuptools_scm/), so you don't need
+        to edit your version anywhere in your source code. Simply create a new [annotated
+        tag](https://git-scm.com/book/en/v2/Git-Basics-Tagging) on the commit you would
+        like to release:
+
+        <div class="termy">
+
+        ```console
+        $ git tag -a v0.1.0 -m "my version 0.1.0"
+        ```
+
+        </div>
+
+2. Next, you have two options to push to PyPI.  In both cases, you'll need to
+have first [registered an account on PyPI](https://pypi.org/account/register/).
+
+    === "Automated Deployment from Github Actions"
+
+        Both the "simple" and "fully featured" versions of this template includes an
+        automated deployment workflow (in `.github/workflows/ci.yml`), that will
+        automatically build and deploy your package to PyPI whenever you push a tagged
+        commit.
+
+        !!!info "One time setup"
+            The first time you do this, you'll need to ...
+
+            1. [Create an API token](https://pypi.org/help/#apitoken) in your
+            PyPI account, if you don't already have one.
+            2. [Create a secret on your github
+            repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
+            named `TWINE_API_KEY`, and add the text of the token you created at PyPI.
+
+                > *The name `TWINE_API_KEY` comes from the variable declared the
+                `workflows/ci.yml` file*
+
+        If you haven't already done so, create an annotated git tag (using `-a`)
+        on the commit you would like to release and push the commit
+        with `--follow-tags` to github:
+
+        <div class="termy">
+
+        ```console
+        $ git tag -a v0.1.0 -m "my version 0.1.0"
+        $ git push --follow-tags
+        ```
+
+        </div>
+
+    === "Manual deployment"
+
+        If you don't have your package on Github, or you'd rather not
+        deal with git or github actions, you can always build and deploy
+        your package the good old-fashioned way :smile::
+
+
+        <div class="termy">
+
+        ```console
+        $ pip install build twine
+        ---> 100%
+        Successfully installed build twine
+
+        $ python -m build
+
+        <b>* Creating virtualenv isolated environment...
+        * Installing packages in isolated environment... (hatchling)
+        * Getting build dependencies for sdist...
+        * Building sdist...
+        * Building wheel from sdist
+        * Creating virtualenv isolated environment...
+        * Installing packages in isolated environment... (hatchling)
+        * Getting build dependencies for wheel...
+        * Building wheel...
+        <font color='lime'>Successfully built my_project-0.1.0.tar.gz and my_project-0.1.0-py3-none-any.whl</font></b>
+
+        $ twine upload dist/*
+        Uploading distributions to https://upload.pypi.org/legacy/
+        Enter your username:
+
+        // Twine will prompt for your PyPI username and password.
+        ```
+
+        </div>
