@@ -58,6 +58,33 @@ nav.md-header__inner {
 .md-search__inner .md-search__icon {
   color: var(--md-default-fg-color--lighter);
 }
+
+/* -------------- Breadcrumbs ----------------- */
+
+.md-typeset ul.breadcrumbs {
+  padding: 0;
+  margin: 0 0 0.4rem 0.2rem;
+  list-style: none;
+  font-size: 0.75rem;
+  color: var(--md-default-fg-color--lighter) !important;
+}
+
+
+.md-typeset ul.breadcrumbs li {
+  display: inline-block;
+  margin-left: 0rem;
+}
+
+.md-typeset ul.breadcrumbs li::after {
+  content: "\203A"; /* › */
+  margin: 0.8rem;
+}
+
+.md-typeset ul.breadcrumbs li:last-child::after {
+  content: "";
+  margin-left: 0;
+}
+
 /* ---------------- Typography ------------ */
 
 .md-typeset {
@@ -83,12 +110,12 @@ nav.md-header__inner {
 
 .md-typeset h2 {
   font-size: 2rem;
-  margin: 1em 0 .64em;
+  margin: 1em 0 0.64em;
 }
 
 .md-typeset h3 {
   font-size: 1.5rem;
-  margin: 1em 0 .8em;
+  margin: 1em 0 0.8em;
 }
 
 .md-typeset h4 {
@@ -148,7 +175,7 @@ table.highlighttable tr:nth-child(2) pre > code {
 
 /* highlighting */
 
-nav.md-nav--secondary label.md-nav__title{
+nav.md-nav--secondary label.md-nav__title {
   color: var(--md-default-fg-color);
   font-weight: 800;
 }
@@ -186,8 +213,8 @@ nav.md-nav--secondary > ul > li.md-nav__item .md-nav__link {
   font-size: 0.9em;
 }
 .metadata.page-metadata {
-    padding: 1.2rem 2rem 0.6rem;
-    border-top: 2px solid var(--md-default-fg-color--lightest)
+  padding: 1.2rem 2rem 0.6rem;
+  border-top: 2px solid var(--md-default-fg-color--lightest);
 }
 .metadata.page-metadata .contributors-text {
   margin-right: 5px;

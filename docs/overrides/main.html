@@ -1,4 +1,8 @@
 {% extends "base.html" %}
+{% block content %}
+    {% include "partials/breadcrumbs.html" %}
+    {{ super() }}
+{% endblock %}
 {% block footer %}
     <ul class="metadata page-metadata"
         data-bi-name="page info"

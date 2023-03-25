@@ -65,6 +65,7 @@ theme:
     - navigation.footer
     # - navigation.instant  # hard to use with javascript on page load
     # - navigation.tracking
+    - navigation.indexes
     - search.highlight
     - search.share
     - search.suggest
