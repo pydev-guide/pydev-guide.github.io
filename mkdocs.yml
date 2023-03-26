@@ -77,9 +77,11 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.keys
+  - pymdownx.tilde
   - pymdownx.snippets
   - pymdownx.superfences
-  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span

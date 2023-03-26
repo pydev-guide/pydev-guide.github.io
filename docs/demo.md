@@ -101,7 +101,7 @@ sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ## Images
 
-![GitHub Logo](/images/logo.png)
+![Random Image](https://picsum.photos/200/300){ width="200" loading="lazy" }
 
 ## Links
 
@@ -134,12 +134,13 @@ Run the command: `pip install my_package`
 
 term
 : definition
+
 term2
 : definition2
 
 ## Strikethrough
 
-~~The world is flat.~~
+~~The world is flat~~
 
 ## Heading IDs
 
@@ -160,8 +161,29 @@ single newline, so it's a separate line in the *same paragraph*.
 !!! tip
     This is a tip
 
+!!! note
+    This is a note
+
+!!! warning
+    This is a warning
+
+!!! danger
+    This is a danger
+
+!!! success
+    This is a success
+
+!!! question
+    This is a question
+
+!!! failure
+    This is a failure
+
+!!! info
+    This is a info
+
 ??? info "Click to expand"
-    This is hidden content
+    `???` makes for hidden content
 
 ## Keyboard keys
 

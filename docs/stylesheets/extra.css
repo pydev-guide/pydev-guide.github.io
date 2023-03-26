@@ -41,9 +41,16 @@ nav.md-header__inner {
 }
 
 /* hide the forks icon */
+.md-source {
+  transition: none;
+}
 .md-source__fact--forks {
   display: none;
 }
+.md-source__repository {
+  overflow: inherit;
+}
+
 
 /* search bar */
 .md-search__form {

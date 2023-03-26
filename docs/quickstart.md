@@ -197,7 +197,8 @@ $ pytest
 
 </div>
 
-As you develop your code, make sure to add more tests to your `tests` directory!
+!!!tip "Tests are important!"
+    As you develop your code, make sure to add more tests to your `tests` directory!
 
 ### Push it to github
 
