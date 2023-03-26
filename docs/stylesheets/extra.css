@@ -301,6 +301,12 @@ body[dir="rtl"] .metadata.page-metadata .contributors-text {
   border: 1px solid var(--md-default-fg-color--lightest);
 }
 
+/* prev/next links */
+
+.md-typeset .md-footer__link {
+  color: var(--md-default-fg-color--light);
+}
+
 /* --------------- ProgressBar ------------------- */
 
 .progress-label {
@@ -315,7 +321,6 @@ body[dir="rtl"] .metadata.page-metadata .contributors-text {
   color: var(--md-code-fg-color);
 }
 
-
 .progress {
   display: block;
   width: 100%;
@@ -324,11 +329,11 @@ body[dir="rtl"] .metadata.page-metadata .contributors-text {
   background-color: var(--md-code-bg-color);
   position: relative;
 }
-  .progress-bar {
-    height: 1.2rem;
-    float: left;
-    background-color: var(--md-accent-fg-color);
-  }
+.progress-bar {
+  height: 1.2rem;
+  float: left;
+  background-color: var(--md-accent-fg-color);
+}
 
 .progress.thin {
   margin-top: 0.9rem;
@@ -359,11 +364,11 @@ body[dir="rtl"] .metadata.page-metadata .contributors-text {
 
 @keyframes animate-stripes {
   0% {
-      background-position:0 0
+    background-position: 0 0;
   }
 
   100% {
-      background-position:6rem 0
+    background-position: 6rem 0;
   }
 }
 
@@ -371,7 +376,8 @@ body[dir="rtl"] .metadata.page-metadata .contributors-text {
   animation: animate-stripes 3s linear infinite;
 }
 
-.md-content .md-typeset a[href*="//"]:not([href*="mywebsite.co.uk"])::after {
+.md-content .md-typeset a[href*="//"]:not([href*="mywebsite.co.uk"])::after
+{
   content: "";
   display: inline-block;
   margin-left: 0.15em;
@@ -386,6 +392,7 @@ body[dir="rtl"] .metadata.page-metadata .contributors-text {
   background-color: var(--md-typeset-a-color);
 }
 
-.md-content .md-typeset  a[href*="//"]:not([href*="mywebsite.co.uk"]):hover::after {
+.md-content .md-typeset  a[href*="//"]:not([href*="mywebsite.co.uk"]):hover::after
+{
   background-color: var(--md-accent-fg-color);
 }

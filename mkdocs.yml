@@ -63,7 +63,8 @@ theme:
     - content.code.copy
     - content.code.annotate
     - content.action.edit
-    - navigation.footer
+    # - navigation.footer  # next/previous links in footer
+    - navigation.content_next  # next/previous links bottom of content
     # - navigation.instant  # hard to use with javascript on page load
     # - navigation.tracking
     - navigation.indexes
