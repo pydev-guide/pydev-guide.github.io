@@ -1,6 +1,8 @@
 ---
 icon: octicons/home-24
 description:  A reference and opinionated guide to Python tooling for scientists.
+hide:
+  - feedback
 ---
 # Python Tooling for Scientists
 
