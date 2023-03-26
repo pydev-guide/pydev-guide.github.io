@@ -4,7 +4,7 @@
         <!-- mkdocs-git-revision-date-localized-plugin -->
         {% if page.meta.git_revision_date_localized %}
             <span class="twemoji" title="last-update">{% include ".icons/material/clock-edit-outline.svg" %}</span>
-            {{ page.meta.git_revision_date_localized }}
+            updated: {{ page.meta.git_revision_date_localized }}
             {% if
                 page.meta.git_creation_date_localized and
                 page.meta.git_creation_date_localized != page.meta.git_revision_date_localized
@@ -12,7 +12,7 @@
                 <span class="twemoji" title="created" style="margin-left: 10px">
                     {% include ".icons/material/clock-plus-outline.svg" %}
                 </span>
-                {{ page.meta.git_creation_date_localized }}
+                created: {{ page.meta.git_creation_date_localized }}
             {% endif %}
             <!-- mkdocs-git-revision-date-plugin -->
         {% elif page.meta.revision_date %}
