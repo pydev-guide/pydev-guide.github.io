@@ -1,3 +1,12 @@
+---
+icon: material/graph-outline
+description: Learn the basics of creating a Python repository.
+tags:
+    - tutorial
+    - getting started
+    - basics
+---
+
 # Python Repo Tutorial
 
 This tutorial will walk you through the process of creating a simple Python

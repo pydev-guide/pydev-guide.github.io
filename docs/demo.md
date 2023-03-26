@@ -1,4 +1,5 @@
 ---
+icon: material/language-markdown-outline
 tags:
   - Formatting
   - Packaging

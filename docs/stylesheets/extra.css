@@ -3,6 +3,7 @@
   /* --md-code-fg-color: #abb2bf; */
   /* --md-code-bg-color: #282c34; */
   --md-code-border-radius: 8px;
+  --nav-size: 0.72rem;
 }
 
 .linenodiv a {
@@ -51,7 +52,6 @@ nav.md-header__inner {
   overflow: inherit;
 }
 
-
 /* search bar */
 .md-search__form {
   border-radius: 99px;
@@ -75,7 +75,6 @@ nav.md-header__inner {
   font-size: 0.75rem;
   color: var(--md-default-fg-color--lighter) !important;
 }
-
 
 .md-typeset ul.breadcrumbs li {
   display: inline-block;
@@ -176,6 +175,52 @@ table.highlighttable tr:nth-child(2) pre > code {
 
 .md-annotation__index [data-md-annotation-id]:before {
   vertical-align: -0.05em;
+}
+
+/* --------------- Left-nav sidebar --------------- */
+
+@media screen and (min-width: 76.25em) {
+  /* hide the `pydev-guide` title at the top of the nav */
+  .md-nav--primary .md-nav__title {
+    display: none;
+  }
+
+  .md-sidebar--primary {
+    padding: 0.7rem 0;
+  }
+}
+
+.md-nav {
+  font-size: var(--nav-size);
+}
+
+.md-nav__item--active.md-nav__item--nested nav.md-nav {
+  border-left: 0.5px solid var(--md-default-fg-color--lighter);
+  margin-left: 0.1rem;
+}
+
+.md-nav__link {
+  align-items: flex-start;
+  justify-content: left;
+  display: flex;
+  margin-top: 0.625em;
+  scroll-snap-align: start;
+  transition: color 125ms;
+}
+
+.md-nav__link svg {
+  fill: currentcolor;
+  flex-shrink: 0;
+  height: 1.3em;
+  align-self: center;
+}
+
+[dir="ltr"] .md-nav__link svg + * {
+  margin-left: 0.4rem;
+}
+
+[dir="rtl"] .md-nav__link svg + * {
+  margin-right: 0.4rem;
 }
 
 /* --------------- Right-nav sidebar --------------- */

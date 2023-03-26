@@ -7,13 +7,14 @@ nav:
   - Home: index.md
   - Quickstart: quickstart.md
   - Tutorial:
-      - Introduction: tutorial/index.md
+      - tutorial/index.md
       - tutorial/bare_minimum.md
       - tutorial/project_metadata.md
       - tutorial/code_quality.md
       - tutorial/github.md
       - tutorial/publishing.md
   - Guides:
+      - guides/index.md
       - pyproject.toml: guides/pyproject.md
       - Packaging: guides/packaging.md
       - Typing: guides/typing.md
@@ -29,7 +30,7 @@ nav:
       - Pre-commit: guides/pre-commit.md
       - Dependency Management: guides/dependencies.md
   - Glossary: glossary.md
-  - "[demo]": demo.md
+  - "[md demo]": demo.md
 
 theme:
   name: material
@@ -69,6 +70,7 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+    - navigation.icons
 
 markdown_extensions:
   - admonition
@@ -109,6 +111,8 @@ plugins:
       minify_js: true
       minify_css: true
       cache_safe: true
+      htmlmin_opts:
+        remove_comments: true
       css_files:
         - stylesheets/extra.css
         - stylesheets/termynal.css

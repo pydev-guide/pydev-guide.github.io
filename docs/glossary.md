@@ -1,3 +1,6 @@
+---
+icon: material/book-open-outline
+---
 # Glossary of Python Terms
 
 #### Code Formatter

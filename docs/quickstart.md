@@ -1,3 +1,10 @@
+---
+icon: material/lightning-bolt
+description: Get up and running with a modern Python project in a few minutes.
+tags:
+    - guides
+    - how to
+---
 <!-- markdownlint-disable MD013 -->
 # Quickstart Python Project
 
