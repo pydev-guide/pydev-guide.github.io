@@ -99,7 +99,8 @@ markdown_extensions:
 
 plugins:
   - search
-  - tags
+  - tags:
+      tags_file: tags.md
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
