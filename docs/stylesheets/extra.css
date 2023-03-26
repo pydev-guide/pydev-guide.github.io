@@ -4,6 +4,7 @@
   /* --md-code-bg-color: #282c34; */
   --md-code-border-radius: 8px;
   --nav-size: 0.72rem;
+  --link-out-svg: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Ik0yMiAzaDd2N20tMS41LTUuNUwyMCAxMm0tMy03SDhhMyAzIDAgMCAwLTMgM3YxNmEzIDMgMCAwIDAgMyAzaDE2YTMgMyAwIDAgMCAzLTN2LTkiLz48L3N2Zz4=");
 }
 
 .linenodiv a {
@@ -368,4 +369,23 @@ body[dir="rtl"] .metadata.page-metadata .contributors-text {
 
 .md-typeset .candystripe-animate .progress-bar {
   animation: animate-stripes 3s linear infinite;
+}
+
+.md-content .md-typeset a[href*="//"]:not([href*="mywebsite.co.uk"])::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0.15em;
+  margin-bottom: 0.3em;
+  vertical-align: middle;
+  width: 0.7em;
+  height: 1em;
+  -webkit-mask-image: var(--link-out-svg);
+  mask-image: var(--link-out-svg);
+  -webkit-mask-size: 0.7em 1em;
+  mask-size: 0.7em 1em;
+  background-color: var(--md-typeset-a-color);
+}
+
+.md-content .md-typeset  a[href*="//"]:not([href*="mywebsite.co.uk"]):hover::after {
+  background-color: var(--md-accent-fg-color);
 }
