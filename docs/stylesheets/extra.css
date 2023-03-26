@@ -15,6 +15,13 @@
   margin-bottom: 10px;
 }
 
+img.front-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
+
 /* -------------- Header ----------------- */
 
 /* transparent header */
@@ -291,4 +298,74 @@ body[dir="rtl"] .metadata.page-metadata .contributors-text {
   width: 2.6rem;
   padding: 0.22em 0.2em 0.2em;
   border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* --------------- ProgressBar ------------------- */
+
+.progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  margin: 0;
+  line-height: 1.2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  color: var(--md-code-fg-color);
+}
+
+
+.progress {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0;
+  height: 1.2rem;
+  background-color: var(--md-code-bg-color);
+  position: relative;
+}
+  .progress-bar {
+    height: 1.2rem;
+    float: left;
+    background-color: var(--md-accent-fg-color);
+  }
+
+.progress.thin {
+  margin-top: 0.9rem;
+  height: 0.4rem;
+}
+
+.progress.thin .progress-label {
+  margin-top: -0.4rem;
+}
+
+.progress.thin .progress-bar {
+  height: 0.4rem;
+}
+
+.md-typeset .progress.candystripe .progress-bar {
+  background-image: linear-gradient(
+    135deg,
+    var(--md-primary-fg-color--light) 27%,
+    transparent 27%,
+    transparent 52%,
+    var(--md-primary-fg-color--light) 52%,
+    var(--md-primary-fg-color--light) 77%,
+    transparent 77%,
+    transparent
+  );
+  background-size: 2rem 2rem;
+}
+
+@keyframes animate-stripes {
+  0% {
+      background-position:0 0
+  }
+
+  100% {
+      background-position:6rem 0
+  }
+}
+
+.md-typeset .candystripe-animate .progress-bar {
+  animation: animate-stripes 3s linear infinite;
 }

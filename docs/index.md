@@ -4,9 +4,14 @@ description:  A reference and opinionated guide to Python tooling for scientists
 ---
 # Python Tooling for Scientists
 
-### 🚧 Coming Soon! 🚧
+![logo](img/flask_logo.svg){: .front-logo}
 
-This site will provide an opinionated guide to Python tooling for scientists.
+<div style="text-align: center">
+    <h3> 🚧 Under Construction! 🚧 </h3>
+    <b>An opinionated guide to Python tooling for scientists.</b>
+</div>
+
+[=70% ]{: .candystripe .candystripe-animate}
 
 !!! note "Why?"
 
@@ -15,11 +20,12 @@ This site will provide an opinionated guide to Python tooling for scientists.
 
 **The goal is to provide:**
 
-- ✅ brief, easily digestible overviews of the most important tools
-- ✅ fully documented templates for common tasks
-- ✅ detailed, in-depth guides for those looking to go deeper
-- ✅ links to official documentation for further reading
+- [x] brief, easily digestible overviews of the most important tools
+- [x] fully documented templates for common tasks
+- [x] detailed, in-depth guides for those looking to go deeper
+- [x] links to official documentation for further reading
 
-*Feel free to look around, but please be aware that this site is still under
-development.  This message will be removed when the site is "ready" for public
-consumption.*
+-----
+
+:wave: *Feel free to look around, but please be aware that this site is
+still under development.*
