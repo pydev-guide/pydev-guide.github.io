@@ -2,7 +2,9 @@
 
 The `[project]` section of the `pyproject.toml` file contains metadata about the
 project. This metadata is used by tools like `pip` and `setuptools` to build and
-install the project.  It's
+install the project.
+
+<https://packaging.python.org/en/latest/specifications/core-metadata/>
 
 ## Example
 

@@ -2,6 +2,8 @@
 
 ## Libraries vs Applications
 
+"Is my package a library or an application?"
+
 ## Where to declare dependencies
 
 explain requirements.txt, setup.py, pyproject.toml, environment.yml
