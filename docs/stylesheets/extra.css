@@ -263,7 +263,7 @@ nav.md-nav--secondary > ul > li.md-nav__item:hover {
 }
 
 /* highlight active item */
-li.md-nav__item:has(> a.md-nav__link--active) {
+nav.md-nav--secondary li.md-nav__item:has(> a.md-nav__link--active) {
   background-color: var(--md-default-fg-color--lightest);
 }
 
