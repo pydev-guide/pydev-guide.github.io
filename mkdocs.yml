@@ -36,7 +36,7 @@ theme:
   logo: img/flask_logo.svg
   favicon: img/flask_logo.svg
   font: false
-  custom_dir: docs/overrides
+  custom_dir: docs/.overrides
   palette:
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
