@@ -1,17 +1,12 @@
 ---
-icon: material/language-markdown-outline
+icon: material/language-markdown-outline  # sets the header icon
+description: "This is a demo of the markdown syntax."  # meta description
 tags:
-  - Formatting
-  - Packaging
+  - Some Tag
+  - Some Other Tag
 ---
 
 # Markdown Demo
-
-```python
-import numpy as np
-
-print(np.__version__)
-```
 
 !!!Note
     This is a demo of the markdown syntax used in this documentation. It is not
@@ -159,11 +154,26 @@ single newline, so it's a separate line in the *same paragraph*.
 
 ## Admonitions
 
+!!! note
+    This is a note
+
 !!! tip
     This is a tip
 
-!!! note
-    This is a note
+!!! bug
+    This is a bug
+
+!!! quote
+    This is a quote
+
+!!! example
+
+    ```python title="some_file.py"
+    from my_package import my_function
+    ```
+
+!!! abstract
+    This is an abstract
 
 !!! warning
     This is a warning
@@ -183,8 +193,40 @@ single newline, so it's a separate line in the *same paragraph*.
 !!! info
     This is a info
 
+!!! note "This has a custom title"
+    This is a note
+
+!!! note ""
+    This one has no title
+
 ??? info "Click to expand"
-    `???` makes for hidden content
+    `???` makes for collapsible content
+
+see docs on [Custom
+Admonitions](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions)
+for customizing the icon
+
+### Inline Admonitions
+
+(must be declared prior to the block they are next to)
+
+!!! info inline end "Lorem ipsum"
+
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Nulla et euismod nulla.
+    Curabitur feugiat, tortor non consequat
+    finibus, justo purus auctor massa, nec
+    semper lorem quam in massa.
+
+```markdown
+!!! info inline end "Lorem ipsum"
+
+    Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Nulla et euismod nulla.
+    Curabitur feugiat, tortor non consequat
+    finibus, justo purus auctor massa, nec
+    semper lorem quam in massa.
+```
 
 ## Keyboard keys
 

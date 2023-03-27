@@ -185,6 +185,20 @@ table.highlighttable tr:nth-child(2) pre > code {
   vertical-align: -0.05em;
 }
 
+/* keep keys centered vertically */
+kbd.key-control {
+  align-self: center;
+  font-size: 0.65em;
+  color: var(--md-default-fg-color--light);
+}
+
+/* hide on small screens */
+@media screen and (max-width: 44.9375em) {
+  kbd.key-control {
+      display:none
+  }
+}
+
 /* --------------- Left-nav sidebar --------------- */
 
 @media screen and (min-width: 76.25em) {
@@ -247,9 +261,12 @@ nav.md-nav--secondary > ul > li.md-nav__item {
 nav.md-nav--secondary > ul > li.md-nav__item:hover {
   border-left-color: var(--md-default-fg-color--lighter);
 }
-nav.md-nav--secondary > ul > li.md-nav__item:has(a.md-nav__link--active) {
+
+/* highlight active item */
+li.md-nav__item:has(> a.md-nav__link--active) {
   background-color: var(--md-default-fg-color--lightest);
 }
+
 nav.md-nav--secondary > ul > li.md-nav__item .md-nav__link {
   margin-top: 0;
   padding-top: 5px;

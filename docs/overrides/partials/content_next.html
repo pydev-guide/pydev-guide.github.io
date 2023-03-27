@@ -13,6 +13,7 @@
                    aria-label="{{ direction }}: {{ page.previous_page.title | e }}"
                    rel="prev">
                     <div class="md-footer__button md-icon">{% include ".icons/material/arrow-left.svg" %}</div>
+                    <kbd class="key-control prev">P</kbd>
                     <div class="md-footer__title">
                         <div class="md-ellipsis">
                             <span class="md-footer__direction">{{ direction }}</span>
@@ -34,6 +35,7 @@
                             {{ page.next_page.title }}
                         </div>
                     </div>
+                    <kbd class="key-control">N</kbd>
                     <div class="md-footer__button md-icon">{% include ".icons/material/arrow-right.svg" %}</div>
                 </a>
             {% endif %}

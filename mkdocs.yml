@@ -26,7 +26,6 @@ nav:
       - Publishing: guides/publishing.md
       - Continuous Integration: guides/ci.md
       - Documentation: guides/documentation.md
-      - Publishing: guides/publishing.md
       - Pre-commit: guides/pre-commit.md
       - Dependency Management: guides/dependencies.md
   - Glossary: glossary.md
