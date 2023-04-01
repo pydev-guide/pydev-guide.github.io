@@ -6,7 +6,7 @@ packages.  The most popular are:
 - [setuptools](https://setuptools.readthedocs.io/en/latest/)
 - [flit](https://flit.readthedocs.io/en/latest/)
 - [poetry](https://python-poetry.org/)
-- [hatchling](https://hatchling.readthedocs.io/en/latest/)
+- [hatchling](https://hatch.pypa.io/latest/)
 
 ## The build module
 

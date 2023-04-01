@@ -2,15 +2,41 @@
 icon: material/lightning-bolt
 description: Get up and running with a modern Python project in a few minutes.
 tags:
-    - guides
-    - how to
+  - guides
+  - how to
 ---
+
 <!-- markdownlint-disable MD013 -->
+
 # Quickstart Python Project
 
-If you're in a hurry, or you've been through this before,
-this quickstart will get you up and running with a modern
-Python project after answering a few questions.
+The goal of this page is to get you up and running quickly with a modern python
+repository that you can use to develop and deploy your package.
+
+This guide will create a _new_ project directory.
+
+???question "What if I have an existing project?"
+
+    There is no automated way to migrate an existing project to use this
+    template.  We recommend creating a new project and copying over your
+    existing source code and metadata manually:
+
+    1. Follow the guide below to create a new project (using the same name as
+       your existing project).
+    2. Copy your existing source code into the new project. For example, if
+       your existing project has a `src` directory, copy it's contents into
+       the new project's `src` directory.  If not, copy your top-level module
+       into new project's `src` directory (then, make sure to update any places
+       in your repo that have hard-coded references to module's path).
+    3. Manually copy over the project metadata from your existing project's
+       `setup.py`, `setup.cfg`, or `pyproject.tom` into the new `[project]` table
+       of your new `pyproject.toml`.  If you use setuptools, their
+       [Quickstart docs](https://setuptools.pypa.io/en/latest/userguide/quickstart.html)
+       have good examples of metadata in each file format.
+    4. From there, it will depend on your project structure & complexity.  You
+       may need to manually copy over other files, such as `requirements.txt`,
+       `requirements-dev.txt`, `Makefile`, etc.  You may also need to manually
+       update your CI config files to use the new project structure.
 
 ## Install Copier
 
@@ -27,13 +53,22 @@ Successfully installed copier
 
 </div>
 
+!!!note
+    This will install Copier in your current Python environment. If you use
+    conda, make sure to `conda activate` the environment you want to use prior
+    to installing Copier. (It can be any environment... we're only going to
+    use copier once to create a new project.)
+
 ## Create a project
 
-Next, run `copier gh:pydev-guide/pyrepo-copier <project-name>` to
-create a new project from the
-[pydev-guide template](https://github.com/pydev-guide/pyrepo-copier)
-(replace `<project-name>`
-with the desired path to your project).
+Next, run the following command to create a new project from the
+[pydev-guide template](https://github.com/pydev-guide/pyrepo-copier).
+Replace `<project-name>` with the desired path to your project, this
+will be the name of the directory that will be created.
+
+```bash
+copier gh:pydev-guide/pyrepo-copier <project-name>
+```
 
 ### Select a Mode
 
@@ -56,13 +91,12 @@ $ copier gh:pydev-guide/pyrepo-copier my-project
 
 </div>
 
-- :sparkles: The **"Fully featured"** version includes git-based versioning and
-   a`pre-commit` config with `black`, `ruff`, `mypy`.
-- :package: If you select **"Simple package"**, you will get a minimal project
-   with only the basic tooling, and manual versioning.
+- :sparkles: **"Fully featured"** includes git-based versioning, automatic
+  deployment, and a `pre-commit` config with `black`, `ruff`, `mypy`.
+- :package: **"Simple package"**, gives you a minimal project with only the
+  basic tooling, and manual versioning.
 - :woman_raising_hand: If you select **"Customize"**, you will be asked a series
-  of questions about your project, and the template will be customized to your
-  needs.
+  of questions allowing you to customize the template to your needs.
 
 ### Enter Metadata
 
@@ -113,6 +147,12 @@ $ A super awesome python package.
 After the project is generated, you will need to do a few things to get it
 ready for development.
 
+- [x] [Initialize a Git Repository](#initialize-a-git-repository)
+- [x] [Install the Project](#install-the-project)
+- [x] [Run the Tests](#run-tests)
+- [x] [Push to GitHub](#push-it-to-github)
+- [x] [Deploy to PyPI](#deploy-to-pypi)
+
 ### Initialize a Git Repository
 
 It's a good idea to keep your project under version control, so let's initialize
@@ -156,8 +196,10 @@ with `pip`:
     project without copying any files into your environment's `site-packages`
     directory. Instead, the files in the development directory are added to
     Python’s import path; so any changes you make to your package will be
-    included the next time you run/import your code.  This approach is well
+    included the next time you run/import your code. This approach is well
     suited for development and is also known as a “development installation”.
+
+    [Read more at Real Python](https://realpython.com/what-is-pip/#installing-packages-in-editable-mode-to-ease-development)
 
 <div class="termy">
 
@@ -294,8 +336,8 @@ ready, you can easily publish your package to the [Python Package Index
 
         </div>
 
-2. Next, you have two options to push to PyPI.  In both cases, you'll need to
-have first [registered an account on PyPI](https://pypi.org/account/register/).
+2. Next, you have two options to push to PyPI. In both cases, you will need to
+   have first [registered an account on PyPI](https://pypi.org/account/register/).
 
     === "Automated Deployment from Github Actions"
 
