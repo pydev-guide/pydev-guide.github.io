@@ -224,7 +224,7 @@ Successfully installed my-project-0.1.dev1+g7d1f9bb
 
 To run your tests, install the test dependencies with the `[test]`
 [extra](https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-extras)
-that was included in the template. This also installs [`pytest`](https://pytest.org), which you 
+that was included in the template. This also installs [`pytest`](https://pytest.org), which you
 can then run:
 
 <div class='termy'>
@@ -308,7 +308,6 @@ and push your project there in one of two ways:
     Github](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=mac)
     for complete details.
 
-
 ### Deploy to PyPI
 
 It's probably a bit premature to be deploying just now :wink:, but when you are
@@ -341,7 +340,6 @@ ready, you can easily publish your package to the [Python Package Index
         ```python title="src/my_project/__init__.py"
         __version__ = '0.1.0'  # update here
         ```
-
 
 2. Next, you have two options to push to PyPI. In both cases, you will need to
    have first [registered an account on PyPI](https://pypi.org/account/register/).
@@ -418,5 +416,5 @@ ready, you can easily publish your package to the [Python Package Index
 
 Congratulations! You have now created a modern Python project that you can test and deploy
 to users. If you are interested in understanding all the different tools and features present
-in the ✨ "Fully featured" package, head to the [Python Repo Tutorial](tutorial/index.md). For 
-in-depth discussions on a variety of topics, check out the [Guides](index.md).  
+in the ✨ "Fully featured" package, head to the [Python Repo Tutorial](tutorial/index.md). For
+in-depth discussions on a variety of topics, check out the [Guides](index.md).
