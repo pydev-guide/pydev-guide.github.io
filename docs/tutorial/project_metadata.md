@@ -1,10 +1,10 @@
 # Project Metadata
 
 The `[project]` section of the `pyproject.toml` file contains metadata about the
-project. This metadata is used by tools like `pip` and `setuptools` to build and
+project itself. This metadata is used by tools like `pip` and `setuptools` to build and
 install the project.
 
-<https://packaging.python.org/en/latest/specifications/core-metadata/>
+You can find the various fields description in the [Python Packaging User Guide](https://packaging.python.org/en/latest/specifications/core-metadata/).
 
 ## Example
 
@@ -17,9 +17,9 @@ readme = "README.md"
 requires-python = ">=3.8"
 license = { text = "BSD 3-Clause License" }
 authors = [
-  {name = "Some Author", email = "someone@example.com"},
-  {name = "Another person"},
-  {email = "different.person@example.com"},
+  {name = "Some Viking", email = "erik.torgrimson@example.com"},
+  {name = "Another Viking"},
+  {email = "someone.else@valhalla.no"},
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -31,7 +31,6 @@ dependencies = [
   "django>2.1; os_name != 'nt'",
   "django>2.0; os_name == 'nt'",
 ]
-
 
 [project.optional-dependencies]
 gui = ["PyQt5"]

@@ -37,7 +37,7 @@ version = "0.0.1"
 
 1. There are a few different build systems that can be used to build Python
    packages. We use `hatchling` here, and discuss other options later.  For
-   setuptools, this section would look like:
+   `setuptools`, this section would look like:
 
     ```toml
     [build-system]
@@ -81,7 +81,7 @@ twine upload dist/* # (2)!
 ```
 
 1. [`build`](https://pypa-build.readthedocs.io) is a modern Python build
-   frontend that creates a wheel and/or source distribution. (If you're used to
+   frontend that creates a wheel and/or source distribution. (If you are used to
    running `python setup.py sdist bdist_wheel`, this replaces that step)
 2. `twine` is a tool that uploads packages to [PyPI](https://pypi.org).
 
@@ -91,6 +91,7 @@ twine upload dist/* # (2)!
 ## Next Steps
 
 While this is sufficient for creating an installable Python package and publishing
-it to PyPI, it leaves a lot to be desired in terms of maintainability. In the
+it to PyPI, it leaves a lot to be desired in terms of maintainability (how do we 
+know that the code works? how do we track changes?). In the
 next sections, we'll fill in some additional metadata and add some tooling to
 make our lives easier.
