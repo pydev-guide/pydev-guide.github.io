@@ -185,6 +185,9 @@ $ git commit -m "Initial commit"
 
 </div>
 
+???question "Why do I see different files than you?"
+    This console prompt shows the result of initializing the "✨ Fully featured" copier project,
+    if you have selected any other option, you might have different files in your new project.
 
 ### Install the Project
 
@@ -221,7 +224,8 @@ Successfully installed my-project-0.1.dev1+g7d1f9bb
 
 To run your tests, install the test dependencies with the `[test]`
 [extra](https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-extras)
-that was included in the template, and then run [`pytest`](https://pytest.org):
+that was included in the template. This also installs [`pytest`](https://pytest.org), which you 
+can then run:
 
 <div class='termy'>
 
@@ -254,11 +258,6 @@ $ pytest
 
 If you want to host your project on GitHub, you can create a new repository
 and push your project there in one of two ways:
-
-!!!tip "Official Documentation"
-    See [Adding locally hosted code to
-    Github](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=mac)
-    for complete details.
 
 === "using the github website"
 
@@ -304,22 +303,19 @@ and push your project there in one of two ways:
 
     </div>
 
+!!!tip "Official Documentation"
+    See [Adding locally hosted code to
+    Github](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=mac)
+    for complete details.
+
+
 ### Deploy to PyPI
 
-It's probably a bit premature to be deploying just now :wink:, but when you're
+It's probably a bit premature to be deploying just now :wink:, but when you are
 ready, you can easily publish your package to the [Python Package Index
 (PyPI)](https://pypi.org), enabling others to `pip install` it.
 
 1. First, make sure you've bumped the version of your package:
-
-    === "If you selected 'Simple' mode"
-
-        Update the version string in the `__init__.py` file in your top level module
-        (this is the single source of truth for your package version)
-
-        ```python title="src/my_project/__init__.py"
-        __version__ = '0.1.0'  # update here
-        ```
 
     === "If you selected 'Fully Featured'"
 
@@ -336,6 +332,16 @@ ready, you can easily publish your package to the [Python Package Index
         ```
 
         </div>
+
+    === "If you selected 'Simple' mode"
+
+        Update the version string in the `__init__.py` file in your top level module
+        (this is the single source of truth for your package version).
+
+        ```python title="src/my_project/__init__.py"
+        __version__ = '0.1.0'  # update here
+        ```
+
 
 2. Next, you have two options to push to PyPI. In both cases, you will need to
    have first [registered an account on PyPI](https://pypi.org/account/register/).
@@ -356,7 +362,7 @@ ready, you can easily publish your package to the [Python Package Index
             repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
             named `TWINE_API_KEY`, and add the text of the token you created at PyPI.
 
-                > *The name `TWINE_API_KEY` comes from the variable declared the
+                > *The name `TWINE_API_KEY` comes from the variable declared in the
                 `workflows/ci.yml` file*
 
         If you haven't already done so, create an annotated git tag (using `-a`)
@@ -375,7 +381,7 @@ ready, you can easily publish your package to the [Python Package Index
     === "Manual deployment"
 
         If you don't have your package on Github, or you'd rather not
-        deal with git or github actions, you can always build and deploy
+        deal with git or Github actions, you can always build and deploy
         your package the good old-fashioned way :smile::
 
 
