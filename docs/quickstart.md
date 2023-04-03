@@ -413,3 +413,10 @@ ready, you can easily publish your package to the [Python Package Index
         ```
 
         </div>
+
+### Conclusion
+
+Congratulations! You have now created a modern Python project that you can test and deploy
+to users. If you are interested in understanding all the different tools and features present
+in the ✨ "Fully featured" package, head to the [Python Repo Tutorial](tutorial/index.md). For 
+in-depth discussions on a variety of topics, check out the [Guides](index.md).  
