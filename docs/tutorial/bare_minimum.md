@@ -91,7 +91,7 @@ twine upload dist/* # (2)!
 ## Next Steps
 
 While this is sufficient for creating an installable Python package and publishing
-it to PyPI, it leaves a lot to be desired in terms of maintainability (how do we 
+it to PyPI, it leaves a lot to be desired in terms of maintainability (how do we
 know that the code works? how do we track changes?). In the
 next sections, we'll fill in some additional metadata and add some tooling to
 make our lives easier.
