@@ -1,10 +1,11 @@
 # Project Metadata
 
-The `[project]` section of the `pyproject.toml` file contains metadata about the
-project itself. This metadata is used by tools like `pip` and `setuptools` to build and
-install the project.
+The `[project]` section of the `pyproject.toml` file contains metadata about
+the project itself. This metadata is used by tools like `pip` and `setuptools`
+to build and install the project.
 
-You can find the various fields description in the [Python Packaging User Guide](https://packaging.python.org/en/latest/specifications/core-metadata/).
+You can find the various fields description in the [Python Packaging User
+Guide](https://packaging.python.org/en/latest/specifications/core-metadata/).
 
 ## Example
 
