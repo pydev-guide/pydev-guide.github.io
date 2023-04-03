@@ -24,10 +24,10 @@ This guide will create a _new_ project directory.
     1. Follow the guide below to create a new project (using the same name as
        your existing project).
     2. Copy your existing source code into the new project. For example, if
-       your existing project has a `src` directory, copy it's contents into
+       your existing project has a `src` directory, copy its contents into
        the new project's `src` directory.  If not, copy your top-level module
-       into new project's `src` directory (then, make sure to update any places
-       in your repo that have hard-coded references to module's path).
+       into the new project's `src` directory (then, make sure to update any places
+       in your repo that have hard-coded references to the module's path).
     3. Manually copy over the project metadata from your existing project's
        `setup.py`, `setup.cfg`, or `pyproject.tom` into the new `[project]` table
        of your new `pyproject.toml`.  If you use setuptools, their
@@ -185,6 +185,10 @@ $ git commit -m "Initial commit"
 
 </div>
 
+???question "Why do I see different files than you?"
+    This console prompt shows the result of initializing the "✨ Fully featured" copier project,
+    if you have selected any other option, you might have different files in your new project.
+
 ### Install the Project
 
 To begin working on your project, you'll usually want to install it in editable mode
@@ -220,7 +224,8 @@ Successfully installed my-project-0.1.dev1+g7d1f9bb
 
 To run your tests, install the test dependencies with the `[test]`
 [extra](https://packaging.python.org/en/latest/tutorials/installing-packages/#installing-extras)
-that was included in the template, and then run [`pytest`](https://pytest.org):
+that was included in the template. This also installs [`pytest`](https://pytest.org), which you
+can then run:
 
 <div class='termy'>
 
@@ -253,11 +258,6 @@ $ pytest
 
 If you want to host your project on GitHub, you can create a new repository
 and push your project there in one of two ways:
-
-!!!tip "Official Documentation"
-    See [Adding locally hosted code to
-    Github](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=mac)
-    for complete details.
 
 === "using the github website"
 
@@ -303,22 +303,18 @@ and push your project there in one of two ways:
 
     </div>
 
+!!!tip "Official Documentation"
+    See [Adding locally hosted code to
+    Github](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github?platform=mac)
+    for complete details.
+
 ### Deploy to PyPI
 
-It's probably a bit premature to be deploying just now :wink:, but when you're
+It's probably a bit premature to be deploying just now :wink:, but when you are
 ready, you can easily publish your package to the [Python Package Index
 (PyPI)](https://pypi.org), enabling others to `pip install` it.
 
 1. First, make sure you've bumped the version of your package:
-
-    === "If you selected 'Simple' mode"
-
-        Update the version string in the `__init__.py` file in your top level module
-        (this is the single source of truth for your package version)
-
-        ```python title="src/my_project/__init__.py"
-        __version__ = '0.1.0'  # update here
-        ```
 
     === "If you selected 'Fully Featured'"
 
@@ -335,6 +331,15 @@ ready, you can easily publish your package to the [Python Package Index
         ```
 
         </div>
+
+    === "If you selected 'Simple' mode"
+
+        Update the version string in the `__init__.py` file in your top level module
+        (this is the single source of truth for your package version).
+
+        ```python title="src/my_project/__init__.py"
+        __version__ = '0.1.0'  # update here
+        ```
 
 2. Next, you have two options to push to PyPI. In both cases, you will need to
    have first [registered an account on PyPI](https://pypi.org/account/register/).
@@ -355,7 +360,7 @@ ready, you can easily publish your package to the [Python Package Index
             repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
             named `TWINE_API_KEY`, and add the text of the token you created at PyPI.
 
-                > *The name `TWINE_API_KEY` comes from the variable declared the
+                > *The name `TWINE_API_KEY` comes from the variable declared in the
                 `workflows/ci.yml` file*
 
         If you haven't already done so, create an annotated git tag (using `-a`)
@@ -374,7 +379,7 @@ ready, you can easily publish your package to the [Python Package Index
     === "Manual deployment"
 
         If you don't have your package on Github, or you'd rather not
-        deal with git or github actions, you can always build and deploy
+        deal with git or Github actions, you can always build and deploy
         your package the good old-fashioned way :smile::
 
 
@@ -406,3 +411,10 @@ ready, you can easily publish your package to the [Python Package Index
         ```
 
         </div>
+
+### Conclusion
+
+Congratulations! You have now created a modern Python project that you can test and deploy
+to users. If you are interested in understanding all the different tools and features present
+in the ✨ "Fully featured" package, head to the [Python Repo Tutorial](tutorial/index.md). For
+in-depth discussions on a variety of topics, check out the [Guides](index.md).
