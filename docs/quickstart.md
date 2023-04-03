@@ -24,10 +24,10 @@ This guide will create a _new_ project directory.
     1. Follow the guide below to create a new project (using the same name as
        your existing project).
     2. Copy your existing source code into the new project. For example, if
-       your existing project has a `src` directory, copy it's contents into
+       your existing project has a `src` directory, copy its contents into
        the new project's `src` directory.  If not, copy your top-level module
-       into new project's `src` directory (then, make sure to update any places
-       in your repo that have hard-coded references to module's path).
+       into the new project's `src` directory (then, make sure to update any places
+       in your repo that have hard-coded references to the module's path).
     3. Manually copy over the project metadata from your existing project's
        `setup.py`, `setup.cfg`, or `pyproject.tom` into the new `[project]` table
        of your new `pyproject.toml`.  If you use setuptools, their
@@ -184,6 +184,7 @@ $ git commit -m "Initial commit"
 ```
 
 </div>
+
 
 ### Install the Project
 
