@@ -10,6 +10,7 @@ nav:
       - tutorial/index.md
       - tutorial/bare_minimum.md
       - tutorial/project_metadata.md
+      - tutorial/testing.md
       - tutorial/code_quality.md
       - tutorial/github.md
       - tutorial/publishing.md
