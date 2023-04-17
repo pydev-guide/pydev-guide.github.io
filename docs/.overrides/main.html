@@ -24,15 +24,17 @@
             <span class="contributors-text">Contributors</span>
             <ul class="contributors" data-bi-name="contributors">
                 {%- for user in committers -%}
-                    <li>
-                        <a href="{{ user.repos }}"
-                           title="{{ user.name }}"
-                           data-bi-name="contributorprofile">
-                            <img src="/img/contributor.svg"
-                                 data-src="{{ user.avatar }}?size=32"
-                                 alt="{{ user.name }}"/>
-                        </a>
-                    </li>
+                    {% if user.name %}
+                        <li>
+                            <a href="{{ user.repos }}"
+                               title="{{ user.name }}"
+                               data-bi-name="contributorprofile">
+                                <img src="/img/contributor.svg"
+                                     data-src="{{ user.avatar }}?size=32"
+                                     alt="{{ user.name }}"/>
+                            </a>
+                        </li>
+                    {% endif %}
                 {%- endfor -%}
             </ul>
         </li>
