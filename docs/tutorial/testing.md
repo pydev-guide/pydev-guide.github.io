@@ -233,7 +233,7 @@ right, `test_migratory` should actually not pass.
     Good that we tested our code!
 
     Writing the tests before implementing the code is called
-    **test-driven developement** and you might want take this approach when
+    **test-driven development** and you might want take this approach when
     coding.
 
 ### Test with a combination of parameters
@@ -295,7 +295,7 @@ Errors are often encountered in python and they are useful to tell users that
 they are doing something wrong. `pytest` allows you to easily test if the
 correct error is raised.
 
-For instance, let's test initializaing a swallow with negative weight:
+For instance, let's test initializing a swallow with negative weight:
 
 ```python
 @pytest.mark.parametrize("species", ["european", "african"])
