@@ -3,12 +3,12 @@
 ```text title="File Structure"
 .github/
 └── workflows/
-    └── pydev_tutorial/
+    └── ci.yaml
 src/
 tests/
 ```
 
-```yaml
+```yaml title="ci.yaml"
 name: CI
 
 on:

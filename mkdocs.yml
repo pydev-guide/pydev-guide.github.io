@@ -22,7 +22,14 @@ nav:
           - tutorial/writing_code/project_metadata.md
       - Testing:
           - tutorial/testing/testing.md
+          - tutorial/testing/code_to_be_tested.md
+          - tutorial/testing/using_pytest.md
+          - tutorial/testing/real_tests.md
+          - tutorial/testing/test_with_parameters.md
+          - tutorial/testing/test_for_errors.md
+          - tutorial/testing/test_fixtures.md
           - tutorial/testing/test_coverage.md
+          - tutorial/testing/test_conclusion.md
       - Code quality:
           - tutorial/code_quality/code_quality.md
           - tutorial/code_quality/pre_commit_hooks.md
