@@ -31,4 +31,13 @@ code.
 
 Apply these tools and you will see the result rapidly![^1]
 
+!!! note "Example repositories"
+    This tutorial guides you through the same tools that are automatically
+    installed if you create a repository using
+    [pyrepo-copier](https://github.com/pydev-guide/pyrepo-copier).
+
+    Finally, in this tutorial we also create some code. The
+    [pydev-tutorial](https://github.com/pydev-guide/pydev-tutorial) repository
+    corresponds to what you will implement by following this step by step.
+
 [^1]: Did you know that 9 out of 10 programmers recommend these tools?
