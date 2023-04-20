@@ -8,6 +8,7 @@ nav:
   - Quickstart: quickstart.md
   - Tutorial:
       - tutorial/index.md
+      - tutorial/summary.md
       - tutorial/bare_minimum.md
       - tutorial/project_metadata.md
       - tutorial/testing.md
@@ -64,7 +65,7 @@ theme:
     - content.code.annotate
     - content.action.edit
     # - navigation.footer  # next/previous links in footer
-    - navigation.content_next  # next/previous links bottom of content
+    - navigation.content_next # next/previous links bottom of content
     # - navigation.instant  # hard to use with javascript on page load
     # - navigation.tracking
     - navigation.indexes
@@ -77,6 +78,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
+  - footnotes
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.keys
