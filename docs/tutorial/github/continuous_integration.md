@@ -56,16 +56,22 @@ jobs:
           cache-dependency-path: "pyproject.toml"
           cache: "pip"
 
-      - name: Install Dependencies
+      - name: Install pip
         run: |
           python -m pip install -U pip
-          # if running a cron job, we add the --pre flag to test against pre-releases
-          python -m pip install .[test] ${{ github.event_name == 'schedule' && '--pre' || ''  }}
+
+      # if running a cron job, we add the --pre flag to
+      # test against pre-releases
+      - name: Install Dependencies
+        run: >
+          python -m pip install .[test]
+          ${{ github.event_name == 'schedule' && '--pre' || ''  }}
 
       - name: 🧪 Run Tests
         run: pytest --color=yes --cov --cov-report=xml --cov-report=term-missing
 
-      # If something goes wrong with --pre tests, we can open an issue in the repo
+      # If something goes wrong with --pre tests,
+      # we can open an issue in the repo
       - name: 📝 Report --pre Failures
         if: failure() && github.event_name == 'schedule'
         uses: JasonEtco/create-an-issue@v2

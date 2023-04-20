@@ -23,9 +23,11 @@ jobs:
   deploy:
     name: Deploy
     needs: test
-    if: success() && startsWith(github.ref, 'refs/tags/') && github.event_name != 'schedule'
+    if: >
+      success()
+      && startsWith(github.ref, 'refs/tags/')
+      && github.event_name != 'schedule'
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v3
         with:
@@ -49,4 +51,5 @@ jobs:
       - uses: softprops/action-gh-release@v1
         with:
           generate_release_notes: true
+
 ```
