@@ -115,7 +115,7 @@ live.
 ```text title="File Structure"
 src/
 └── pydev_tutorial/
-    ├── __init__.py
+└── pydev_tutorial/
     └── swallow.py
 tests/
 ├── __init__.py
