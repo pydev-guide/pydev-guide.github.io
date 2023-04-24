@@ -18,7 +18,7 @@ jobs:
       - name: ✅ Checkout
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # needed for git committers
+          fetch-depth: 0 # needed for git committers
 
       - name: 🐍 Install Python
         uses: actions/setup-python@v4
@@ -26,7 +26,9 @@ jobs:
           python-version: "3.x"
 
       - name: 🔗 Check Links
-        run: npx markdown-link-check docs/**/*.md --progress -q
+        run: |
+          npm install markdown-link-check@"<3.11.1"
+          npx markdown-link-check docs/**/*.md --progress -q
 
       - name: 📚 Build Docs
         run: |
