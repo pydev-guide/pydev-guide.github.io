@@ -10,7 +10,7 @@ repos:
       - id: markdownlint
         args: [--fix]
   - repo: https://github.com/Riverside-Healthcare/djLint
-    rev: v1.25.0
+    rev: v1.27.2
     hooks:
       - id: djlint-django
         args: [--reformat]
