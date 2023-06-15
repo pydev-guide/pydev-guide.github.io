@@ -67,7 +67,7 @@ Replace `<project-name>` with the desired path to your project, this
 will be the name of the directory that will be created.
 
 ```bash
-copier gh:pydev-guide/pyrepo-copier <project-name>
+copier copy gh:pydev-guide/pyrepo-copier <project-name>
 ```
 
 ### Select a Mode
@@ -77,7 +77,7 @@ You will first be asked to select a "mode":
 <div class="termy">
 
 ```console
-$ copier gh:pydev-guide/pyrepo-copier my-project
+$ copier copy gh:pydev-guide/pyrepo-copier my-project
 
 // To opt in to the default tooling, press Enter.
 // Use "Simple" for minimal tooling, or "Customize" to ask questions.
