@@ -8,11 +8,41 @@ nav:
   - Quickstart: quickstart.md
   - Tutorial:
       - tutorial/index.md
+      - tutorial/summary.md
       - tutorial/bare_minimum.md
-      - tutorial/project_metadata.md
-      - tutorial/code_quality.md
-      - tutorial/github.md
-      - tutorial/publishing.md
+      - Pre-requisite:
+          - tutorial/pre_requisite/virtual_environment.md
+          - tutorial/pre_requisite/version_control.md
+          - tutorial/pre_requisite/ide.md
+      - Writing code:
+          - tutorial/writing_code/writing_code.md
+          - tutorial/writing_code/pep8.md
+          - tutorial/writing_code/code_documentation.md
+          - tutorial/writing_code/typing.md
+          - tutorial/writing_code/project_metadata.md
+      - Testing:
+          - tutorial/testing/testing.md
+          - tutorial/testing/code_to_be_tested.md
+          - tutorial/testing/using_pytest.md
+          - tutorial/testing/real_tests.md
+          - tutorial/testing/test_with_parameters.md
+          - tutorial/testing/test_for_errors.md
+          - tutorial/testing/test_fixtures.md
+          - tutorial/testing/test_coverage.md
+          - tutorial/testing/test_conclusion.md
+      - Code quality:
+          - tutorial/code_quality/code_quality.md
+          - tutorial/code_quality/pre_commit_hooks.md
+          - tutorial/code_quality/linter.md
+          - tutorial/code_quality/formatter.md
+          - tutorial/code_quality/type_checking.md
+      - Github:
+          - tutorial/github/github.md
+          - tutorial/github/continuous_integration.md
+          - tutorial/github/github_apps.md
+          - tutorial/github/deployment.md
+          - tutorial/github/publishing.md
+          - tutorial/github/github_pages.md
   - Guides:
       - guides/index.md
       - pyproject.toml: guides/pyproject.md
@@ -63,7 +93,7 @@ theme:
     - content.code.annotate
     - content.action.edit
     # - navigation.footer  # next/previous links in footer
-    - navigation.content_next  # next/previous links bottom of content
+    - navigation.content_next # next/previous links bottom of content
     # - navigation.instant  # hard to use with javascript on page load
     # - navigation.tracking
     - navigation.indexes
@@ -76,6 +106,7 @@ markdown_extensions:
   - admonition
   - attr_list
   - def_list
+  - footnotes
   - pymdownx.details
   - pymdownx.inlinehilite
   - pymdownx.keys
