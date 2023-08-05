@@ -45,6 +45,7 @@ nav:
           - tutorial/github/github_pages.md
   - Guides:
       - guides/index.md
+      - Virtual Environments: guides/environments.md
       - pyproject.toml: guides/pyproject.md
       - Packaging: guides/packaging.md
       - Typing: guides/typing.md
