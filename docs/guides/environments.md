@@ -174,7 +174,7 @@ We can deactivate an environment with
     ```console
     $ (my-env) ➜ conda deactivate
 
-    // You are no longer in my-env.
+    // You are no longer in 'my-env'.
 
     $
     ```
@@ -193,7 +193,8 @@ We can remove an environment with
     // Your environment no longer exists
 
     $ conda activate my-env
-    Cannot activate, prefix does not exist at: '/Users/pydev/micromamba/envs/
+    Cannot activate, prefix does not exist at:
+    '/Users/pydev/micromamba/envs/'
     ```
 
 </div>
