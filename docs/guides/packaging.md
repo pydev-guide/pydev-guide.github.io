@@ -34,7 +34,3 @@ Standards compliant, purpose built tools are the future of Python packaging.
 If you would like to read more about why directly invoking `setup.py` has been deprecated
 please read this [fantastic article by Paul Ganssle](The following is a short summary of a
 [fantastic article by Paul Ganssle](https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html).
-
-
-
-
