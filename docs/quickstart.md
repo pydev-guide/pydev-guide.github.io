@@ -354,14 +354,13 @@ ready, you can easily publish your package to the [Python Package Index
         !!!info "One time setup"
             The first time you do this, you'll need to ...
 
-            1. [Create an API token](https://pypi.org/help/#apitoken) in your
-            PyPI account, if you don't already have one.
-            2. [Create a secret on your github
-            repository](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository)
-            named `TWINE_API_KEY`, and add the text of the token you created at PyPI.
+            - [Create a trusted publisher for a new project](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/) 
+            in your PyPI account, if your project is not yet on PyPI.
+            - [Create a trusted publisher for an existing project](https://docs.pypi.org/trusted-publishers/adding-a-publisher/)
+            in your PyPI account, if your project is already on PyPI.
 
-                > *The name `TWINE_API_KEY` comes from the variable declared in the
-                `workflows/ci.yml` file*
+                >       *The workflow for automated deployments is `ci.yml` and comes from the 
+                      `workflows/ci.yml` file*
 
         If you haven't already done so, create an annotated git tag (using `-a`)
         on the commit you would like to release and push the commit
