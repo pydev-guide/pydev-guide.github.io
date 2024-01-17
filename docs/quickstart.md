@@ -359,7 +359,7 @@ ready, you can easily publish your package to the [Python Package Index
             - [Create a trusted publisher for an existing project](https://docs.pypi.org/trusted-publishers/adding-a-publisher/)
             in your PyPI account, if your project is already on PyPI.
 
-                >       *The workflow for automated deployments is `ci.yml` and comes from the
+                > *The workflow for automated deployments is `ci.yml` and comes from the
                       `workflows/ci.yml` file*
 
         If you haven't already done so, create an annotated git tag (using `-a`)
