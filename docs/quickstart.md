@@ -354,12 +354,12 @@ ready, you can easily publish your package to the [Python Package Index
         !!!info "One time setup"
             The first time you do this, you'll need to ...
 
-            - [Create a trusted publisher for a new project](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/) 
+            - [Create a trusted publisher for a new project](https://docs.pypi.org/trusted-publishers/creating-a-project-through-oidc/)
             in your PyPI account, if your project is not yet on PyPI.
             - [Create a trusted publisher for an existing project](https://docs.pypi.org/trusted-publishers/adding-a-publisher/)
             in your PyPI account, if your project is already on PyPI.
 
-                >       *The workflow for automated deployments is `ci.yml` and comes from the 
+                >       *The workflow for automated deployments is `ci.yml` and comes from the
                       `workflows/ci.yml` file*
 
         If you haven't already done so, create an annotated git tag (using `-a`)
