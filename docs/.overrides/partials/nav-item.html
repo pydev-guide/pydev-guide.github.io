@@ -1,4 +1,8 @@
-<!-- Wrap everything with a macro to reduce file roundtrips (see #2213) -->
+<!-- 
+    This partial is modified to render icons in navigation,
+    but it is no longer necessary after mkdocs-material mkdocs-material 9.2
+    since that version includes the feature by default.
+ -->
 {% macro render(nav_item, path, level) %}
     <!-- Determine class according to state -->
     {% set class = "md-nav__item" %}

@@ -1,6 +1,6 @@
-mkdocs
-mkdocs-material
-mkdocs-spellcheck[all]
-mkdocs-git-revision-date-localized-plugin
-mkdocs-git-committers-plugin
-mkdocs-minify-plugin
+mkdocs-material==9.1.18
+mkdocs-material-extensions==1.2
+mkdocs-spellcheck[all]==1.0.2
+mkdocs-git-revision-date-localized-plugin==1.2.4
+mkdocs-git-committers-plugin==0.2.3
+mkdocs-minify-plugin==0.8.0

@@ -59,7 +59,7 @@ nav:
       - Pre-commit: guides/pre-commit.md
       - Dependency Management: guides/dependencies.md
   - Glossary: glossary.md
-  - "[md demo]": demo.md
+  # - "[md demo]": demo.md
 
 theme:
   name: material

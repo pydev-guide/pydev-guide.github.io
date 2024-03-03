@@ -117,7 +117,7 @@ Run the command: `pip install my_package`
 
 ## Task Lists
 
-* [x] @mentions, #refs, [links](index), **formatting**, and <del>tags</del> supported
+* [x] @mentions, #refs, [links](index.md), **formatting**, and <del>tags</del> supported
 * [x] list syntax required (any unordered or ordered list supported)
 * [x] this is a complete item
 * [ ] this is an incomplete item
@@ -234,8 +234,8 @@ for customizing the icon
 
 ## Buttons
 
-[Subscribe to our newsletter](index){ .md-button .md-button--primary }
+[Subscribe to our newsletter](index.md){ .md-button .md-button--primary }
 
 with icons
 
-[Send :fontawesome-solid-paper-plane:](index){ .md-button }
+[Send :fontawesome-solid-paper-plane:](index.md){ .md-button }
