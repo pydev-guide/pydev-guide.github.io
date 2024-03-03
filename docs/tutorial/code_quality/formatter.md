@@ -1,4 +1,4 @@
-# Formatting code with black
+# Formatting code with ruff
 
 Why manually bother to format your code when you can automate it?
 
@@ -6,9 +6,9 @@ Why manually bother to format your code when you can automate it?
 repos:
     ...
 
-  - repo: https://github.com/psf/black
-    rev: 23.1.0
+  - repo: https://github.com/charliermarsh/ruff-pre-commit
+    rev: v0.3.0
     hooks:
-      - id: black
+      - id: ruff-format
 
 ```

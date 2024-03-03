@@ -22,9 +22,8 @@ Here is a list of the main tools we will go over:
 code.
 - `pyproject.toml`: a single file with all your Python packaging information.
 - `pytest`: get in the habit of writing tests to make your code bullet-proof.
-- `black`: make your code more readable using automatic formatting.
+- `ruff`: improve code quality using a linter and code formatter.
 - `mypy`: enforce types, and never be surprised by inputs and outputs.
-- `ruff`: improve code quality using a linter.
 - `codecov`: find the blind spots of your tests.
 - `pre-commit`: automate formatter, linter, or type checker before every commit.
 - `Github actions`: automate everything everywhere all at once!

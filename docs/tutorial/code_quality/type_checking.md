@@ -5,7 +5,7 @@ repos:
   ...
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.1.1
+    rev: v1.8.0
     hooks:
       - id: mypy
         files: "^src/"

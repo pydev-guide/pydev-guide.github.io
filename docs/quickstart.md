@@ -92,7 +92,7 @@ $ copier copy gh:pydev-guide/pyrepo-copier my-project
 </div>
 
 - :sparkles: **"Fully featured"** includes git-based versioning, automatic
-  deployment, and a `pre-commit` config with `black`, `ruff`, `mypy`.
+  deployment, and a `pre-commit` config with `ruff` and `mypy`.
 - :package: **"Simple package"**, gives you a minimal project with only the
   basic tooling, and manual versioning.
 - :woman_raising_hand: If you select **"Customize"**, you will be asked a series

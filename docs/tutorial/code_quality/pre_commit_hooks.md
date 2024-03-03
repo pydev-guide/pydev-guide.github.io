@@ -12,7 +12,7 @@ src/
 ```yaml title=".pre-commit-config.yaml"
 repos:
   - repo: https://github.com/abravalheri/validate-pyproject
-    rev: v0.12.1
+    rev: v0.16
     hooks:
       - id: validate-pyproject
 ```

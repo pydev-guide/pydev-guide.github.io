@@ -5,10 +5,10 @@ icon: material/book-open-outline
 
 #### Code Formatter
 
-:   Code Formatters like `black`, `yapf`, and `autopep8` are tools that automatically
-    *modify* code to conform to a particular style guide. They help ensure
-    that code looks consistent across multiple developers (e.g. indentation,
-    spacing, etc.)
+:   Code Formatters like `ruff`, `black`, `yapf`, and `autopep8` are tools that
+    automatically *modify* code to conform to a particular style guide. They
+    help ensure that code looks consistent across multiple developers (e.g.
+    indentation, spacing, etc.)
 
 #### Linter
 
