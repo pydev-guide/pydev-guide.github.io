@@ -38,36 +38,15 @@ This guide will create a _new_ project directory.
        `requirements-dev.txt`, `Makefile`, etc.  You may also need to manually
        update your CI config files to use the new project structure.
 
-## Install Copier
-
-First install [Copier](https://copier.readthedocs.io/en/stable/),
-which we will use to run the project template.
-
-<div class="termy">
-
-```console
-$ pip install copier
----> 100%
-Successfully installed copier
-```
-
-</div>
-
-!!!note
-    This will install Copier in your current Python environment. If you use
-    conda, make sure to `conda activate` the environment you want to use prior
-    to installing Copier. (It can be any environment... we're only going to
-    use copier once to create a new project.)
-
 ## Create a project
 
-Next, run the following command to create a new project from the
+Next, [install uv](https://docs.astral.sh/uv/getting-started/installation/) then run the following command to create a new project from the
 [pydev-guide template](https://github.com/pydev-guide/pyrepo-copier).
 Replace `<project-name>` with the desired path to your project, this
 will be the name of the directory that will be created.
 
 ```bash
-copier copy gh:pydev-guide/pyrepo-copier <project-name>
+uvx copier copy --trust gh:pydev-guide/pyrepo-copier <project-name>
 ```
 
 ### Select a Mode
