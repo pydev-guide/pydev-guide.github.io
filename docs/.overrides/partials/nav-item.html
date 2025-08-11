@@ -27,7 +27,10 @@
                 {% set indeterminate = "md-toggle--indeterminate" %}
             {% endif %}
             <!-- Active checkbox expands items contained within nested section -->
-            <input class="md-nav__toggle md-toggle {{ indeterminate }}" type="checkbox" id="{{ path }}" {{ checked }} />
+            <input class="md-nav__toggle md-toggle {{ indeterminate }}"
+                   type="checkbox"
+                   id="{{ path }}"
+                   {{ checked }} />
             <!-- Determine all nested items that are index pages -->
             {% set indexes = [] %}
             {% if "navigation.indexes" in features %}
