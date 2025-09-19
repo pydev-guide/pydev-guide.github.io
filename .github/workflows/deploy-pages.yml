@@ -17,14 +17,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ✅ Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v5
         with:
           fetch-depth: 0 # needed for git committers
 
       - name: 🐍 Install Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: "3.x"
+        uses: astral-sh/setup-uv@v6
 
       - name: 🔗 Check Links
         run: |
@@ -32,16 +30,13 @@ jobs:
           npx markdown-link-check docs/**/*.md --progress -q
 
       - name: 📚 Build Docs
-        run: |
-          pip install -U pip
-          pip install -r requirements.txt
-          mkdocs build --strict
+        run: uv run mkdocs build --strict
         env:
           MKDOCS_GIT_COMMITTERS_APIKEY: ${{ secrets.GITHUB_TOKEN }}
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
 
       - name: ⬆️ Upload Pages Artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: "site/"
 
@@ -55,4 +50,4 @@ jobs:
     steps:
       - name: 🚀 Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4

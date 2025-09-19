@@ -10,6 +10,5 @@
 To run the dev site locally
 
 ```bash
-pip install -r requirements.txt
-mkdocs serve
+uv run mkdocs serve
 ```
